@@ -9,10 +9,12 @@ public class FlightsFile {
     public FlightsFile(CheckFormatFile checkFormatFile) throws IOException {
 
         this.file = new File("Flights File.dat");
+
         if (!file.exists()) {
             this.flightsFile = new RandomAccessFile("Flights File.dat", "rw");
             writeDefaultFlights(checkFormatFile);
-        } else if (this.flightsFile == null)
+        }
+        else if (this.flightsFile == null)
             this.flightsFile = new RandomAccessFile("Flights File.dat", "rw");
     }
 

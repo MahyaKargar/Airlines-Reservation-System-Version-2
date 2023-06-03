@@ -9,6 +9,7 @@ public class AdminsFile {
     public AdminsFile(CheckFormatFile checkFormatFile) throws IOException {
 
         this.file = new File("AdminsFile.dat");
+
         if (!file.exists()) {
             this.adminsInfoFile = new RandomAccessFile("AdminsFile.dat", "rw");
             writeDefaultAdmins(checkFormatFile);
